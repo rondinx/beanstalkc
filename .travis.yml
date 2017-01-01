@@ -42,6 +42,8 @@ install:
     - sudo pip-$PYV install http://pyyaml.org/download/pyyaml/PyYAML-3.09.tar.gz
     # ... and tes testing dependencies.
     - sudo pip-$PYV install nose
+    # Install Python dependencies.
+    - pip install -r .travis-requirements.txt
 
 script: nosetests-$PYV -c .nose.cfg
 
